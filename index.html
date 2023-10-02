@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Talgd Landing Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    <style>
+           .course-container {
+               display: flex;
+               flex-wrap: wrap;
+               justify-content: space-around;
+               align-items: center;
+               /* gap: 20px; */
+               transition: all 0.3s ease;
+           }
+   
+           .course {
+               flex-basis: 25%;
+               padding: 10px;
+               min-width: 200px;
+               text-align: center;
+               border-radius: 5px;
+               transform: translateY(20px); 
+               transition: opacity 0.3s ease, transform 0.3s ease; 
+               display: none; /* Initially hide all courses */
+           }
+   
+           .course img {
+               width: 90%;
+               margin-left: 30px;
+           }
+   
+           .title {
+               text-align: center;
+               margin: 00 auto 80px;
+               position: relative;
+               line-height: 60px;
+               color: #224F34;
+           }
+   
+           .title::after {
+               content: '';
+               background: #224F34;
+               width: 80px;
+               height: 5px;
+               border-radius: 5px;
+               position: absolute;
+               bottom: 0;
+               left: 50%;
+               transform: translateX(-50%);
+           }
+   
+           h4 {
+               margin-top: 30px;
+               text-align: center;
+               color: #224F34;
+               font-weight: normal;
+           }
+   
+           .course p {
+               display: flex;
+               justify-content: center;
+               text-align: center;
+               padding-left: 10px;
+               font-size: 14px;
+               line-height: 30px;
+           }
+   
+           .fas {
+               color: gold;
+               padding-left: 10px;
+               margin-top: 7px;
+           }
+   
+           .course:hover {
+               transform: translateY(-5px);
+           }
+   
+           .buttons-container {
+               display: flex;
+               justify-content: center;
+               gap: 30px;
+           }
+   
+           #cohortCoursesButton, #oneOnOneCoursesButton {
+               background: transparent;
+               border: 0;
+               outline: none;
+               font-size: 18px;
+               padding-left: 10px;
+               text-transform: uppercase;
+               cursor: pointer;
+               position: relative;
+           }
+   
+           
+           #cohortCoursesButton::after,
+           #oneOnOneCoursesButton::after {
+               content: "";
+               position: absolute;
+               bottom: 0;
+               left: 0;
+               width: 0;
+               height: 2px; 
+               background-color: transparent; 
+               transition: width 0.5s ease; 
+           }
+   
+           #cohortCoursesButton.active::after,
+           #oneOnOneCoursesButton.active::after {
+               background-color: #224F34;
+               color: #224F34; 
+               width: 100%;
+           }
+   
+           #cohortCoursesButton:hover::after {
+               background-color: #224F34; 
+           }
+   
+           #oneOnOneCoursesButton:hover::after {
+               background-color: #224F34; 
+           }
+       </style>
+
+</head>
+<body>
+    <div class="container">
+    <header>
+        <a href><img class="logo" src ="logo.png"></a>
+        <nav>
+            <ul id="MenuItems" class="nav-links">
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">COURSES</a></li>
+                <li><a href="#">ABOUT</a></li>
+            </ul>
+        </nav>
+        <a class="cta" href="#"><button>CONTACT</button></a>
+        <!-- <i class="fas fa-bars" onclick="menutoggle()"></i> -->
+    </header>
+    <div class="row">
+        <div class="col-2">
+            <h1>Discover and Find Your Own Tech<br> Skill!</h1>
+            <p>Join Our October Cohort for a transformative journey as we 
+                equip you with in-demand tech skills, mentorship, and a vibrant community 
+                of <br>like minded individuals. Don't miss out on this opportunity to grow <br>with our cohort!</p>
+            <a href="" class="btn">ENROLL NOW &#8594;</a>
+        </div>
+        <div class="col-2">
+            <img src="Mask group.png">
+        </div>
+    </div>
+    </div>
+
+    <!-- ABOUT US -->
+
+    <div class="about-us">
+        <div class="about-col">
+            <img src="vector.png">
+        </div>
+        <div class="about-col">
+            <h2>About Us</h2>
+            <p>We are tagging tech talents with the resources they need to grow and be globally relevant.</p>
+        </div>
+    </div>
+
+    <!-- Our Services -->
+    <div class="small-container">
+        <h2 class="title">Our Services</h2>
+        <div class="buttons-container">
+            <button id="cohortCoursesButton">Cohort Courses</button>
+            <button id="oneOnOneCoursesButton">One on One Courses</button>
+        </div>
+        <div class="course-container">
+            <div class="course cohort"> 
+                <a href=""><img src="Ellipse 29.png"></a>
+                <h4>Web Development FrontEnd</h4>
+                <p>#50,000 | 5.0<i class="fas fa-star"></i></p>
+            </div>
+            <!-- Add more cohort courses here -->
+
+            <div class="course cohort">
+                <a href=""><img src="Ellipse 30.png"></a>
+                <h4>Web Development BackEnd</h4>
+                <p>#50,000    |      4.9<i class="fas fa-star"></i></p>
+            </div>
+    
+            <div class="course cohort">
+                <a href=""><img src="Ellipse 31.png"></a>
+                <h4>Graphic Design</h4>
+                <p>#35,000    |      4.8<i class="fas fa-star"></i></p>
+            </div>
+    
+            <div class="course cohort">
+                <a href=""><img src="Ellipse 32.png"></a>
+                <h4>UI/UX Design</h4>
+                <p>#40,000    |      4.7<i class="fas fa-star"></i></p>
+            </div>
+
+            <div class="course cohort">
+                <a href=""><img src="Ellipse 33.png"></a>
+                <h4>Data Analysis</h4>
+                <p>#50,000    |      5.0<i class="fas fa-star"></i></p>
+            
+            </div>
+            <div class="course cohort">
+                <a href=""><img src="Ellipse 34.png"></a>
+                <h4>Product Management</h4>
+                <p>#35,000    |      4.9<i class="fas fa-star"></i></p>
+            </div>
+    
+            <div class="course cohort">
+                <a href=""><img src="Ellipse 35.png"></a>
+                <h4>Digital Marketing</h4>
+                <p>#30,000    |      4.8<i class="fas fa-star"></i></p>
+            </div>
+
+            <div class="course one-on-one">
+                <a href=""><img src="Ellipse 29.png"></a>
+                <h4>Web Development FrontEnd</h4>
+                <p>#65,000    |      5.0<i class="fas fa-star"></i></p>
+            </div>
+            <!-- Add more one-on-one courses here -->
+            <div class="course one-on-one">
+                <a href=""><img src="Ellipse 30.png"></a>
+                <h4>Web Development BackEnd</h4>
+                <p>#65,000    |      4.9<i class="fas fa-star"></i></p>
+            </div>
+    
+            <div class="course one-on-one">
+                <a href=""><img src="Ellipse 31.png"></a>
+                <h4>Graphic Design</h4>
+                <p>#50,000    |      4.8<i class="fas fa-star"></i></p>
+            </div>
+    
+            <div class="course one-on-one">
+                <a href=""><img src="Ellipse 32.png"></a>
+                <h4>UI/UX Design</h4>
+                <p>#55,000    |      4.7<i class="fas fa-star"></i></p>
+            </div>
+
+            <div class="course one-on-one">
+                <a href=""><img src="Ellipse 33.png"></a>
+                <h4>Data Analysis</h4>
+                <p>#65,000    |      5.0<i class="fas fa-star"></i></p>
+            
+            </div>
+            <div class="course one-on-one">
+                <a href=""><img src="Ellipse 34.png"></a>
+                <h4>Product Management</h4>
+                <p>#50,000    |      4.9<i class="fas fa-star"></i></p>
+            </div>
+    
+            <div class="course one-on-one">
+                <a href=""><img src="Ellipse 35.png"></a>
+                <h4>Digital Marketing</h4>
+                <p>#45,000    |      4.8<i class="fas fa-star"></i></p>
+            </div>
+
+        </div>
+    </div>
+    
+
+<!-- EXCLUSIVE OFFER -->
+
+<div class="offer-container">
+    <div class="col-5">
+        <h2>Exclusive Offer</h2>
+        <p>"Refer Two Students and Enjoy a 10%<br> Discount! Your Chance to Save While<br> Helping Others Excel."</p>
+        <a href="" class="btn">ENROLL NOW &#8594;</a>
+    </div>
+</div>
+
+<!-- Testimonials -->
+
+<div class="testimonial">
+    <h1>Testimonials</h1>
+    <div class="small-container">
+        <div class="row">
+            <div class="col-3">
+                <i class="fas fa-quote-left"></i>
+                <p>The customer experience was exceptional from start to finish. The website is user-friendly, the checkout process was smooth, and the clothes I ordered fit perfectly. I'm beyond satisfied!</p>
+                <h3>Owoseni John</h3>
+            </div>
+            <div class="col-3 susannah">
+                <i class="fas fa-quote-left"></i>
+                <p class="susan">I absolutely love the quality and style of the clothing I purchased from this website. customer service was outstanding, and I received my order quickly. Highly recommended!</p>
+                <h3>Ajibade Susan</h3>
+            </div>
+            <div class="col-3">
+                <i class="fas fa-quote-left"></i>
+                <p>I had a great experience shopping on this website. The clothes I bought are fashionable and comfortable. Highly satisfied!</p>
+                <h3>Alabi Ayomikun</h3>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!------- Footer -------->
+
+<div class="footer">
+    <div class="row">
+        <div class="footer-col">
+            <a href=""><img src="logo-2.png"></a>
+            <a href="">Social Media</a>
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-linkedin"></i>
+            <i class="fab fa-twitter-square"></i>
+        </div>
+        <div class="footer-col">
+            <a href="">COURSES</a>
+            <a href>Cohort</a>
+            <a href>One-On-One</a>
+        </div>
+        <div class="footer-col">
+            <a href="">COMPANY</a>
+            <a href>About Us</a>
+            <a href>Contact</a>
+        </div>
+        <div class="footer-col">
+            <a href="">STAY UP TO DATE</a>
+            <form class="email-signup">
+                <input type="email" placeholder="Enter your email">
+                <button type="submit">SUBMIT</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<script>
+
+    // JavaScript to toggle course visibility based on button click
+    const cohortCoursesButton = document.getElementById('cohortCoursesButton');
+    const oneOnOneCoursesButton = document.getElementById('oneOnOneCoursesButton');
+    const cohortCourses = document.querySelectorAll('.course.cohort');
+    const oneOnOneCourses = document.querySelectorAll('.course.one-on-one');
+
+    cohortCoursesButton.addEventListener('click', () => {
+        cohortCoursesButton.classList.add('active');
+        oneOnOneCoursesButton.classList.remove('active');
+        
+        cohortCourses.forEach(course => {
+            course.style.display = 'block';
+        });
+        oneOnOneCourses.forEach(course => {
+            course.style.display = 'none';
+        });
+    });
+
+    oneOnOneCoursesButton.addEventListener('click', () => {
+        oneOnOneCoursesButton.classList.add('active');
+        cohortCoursesButton.classList.remove('active');
+        
+        cohortCourses.forEach(course => {
+            course.style.display = 'none';
+        });
+        oneOnOneCourses.forEach(course => {
+            course.style.display = 'block';
+        });
+    });
+
+    // Initialize the display based on the active button
+    if (cohortCoursesButton.classList.contains('active')) {
+        cohortCoursesButton.click();
+    } else {
+        oneOnOneCoursesButton.click();
+    }
+
+    var MenuItems = document.getElementById("MenuItems");
+
+MenuItems.style.maxHeight = "opx";
+
+function menutoggle() {
+    if (MenuItems.style.maxHeight == "0px")
+    {
+        MenuItems.style.maxHeight == "200px"
+    }
+    else 
+    {
+        MenuItems.style.maxHeight == "0px"
+    }
+}
+</script>
+
+
+
+</body>
+</html>
